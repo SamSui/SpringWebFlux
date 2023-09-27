@@ -1,0 +1,19 @@
+db:
+  data:
+    domains:
+      - name: pgdsbwd
+        provideDefaultConnection: enabled
+        type: javax.sql.DataSource
+        driverClassName: org.postgresql.Driver
+        validationInterval: 1000
+        username: "test"
+        password: "test"
+        url: "jdbc:postgresql://10.194.248.101:15432/pgdsbwd?useSSL=false"
+        maxTotal: 80
+        maxIdle: 10
+        maxWaitMillis: "10000"
+        validationQuery: "SELECT 1 FROM DUAL"
+        testOnBorrow: "true"
+        connectionProperties: "streamstolob=true"
+        minEvictableIdleTimeMillis: 300000
+        timeBetweenEvictionRunsMillis: 300000
